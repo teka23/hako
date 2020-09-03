@@ -1,10 +1,16 @@
 version: 2.1
 
 jobs:
-  setup:
+  test:
     docker:
       - image: cimg/ruby:2.6.1
     steps:
       - checkout
       - run: bin/setup
       - run: rake spec
+
+workflows:
+  version: 2
+  test:
+    jobs:
+      - test
