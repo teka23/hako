@@ -57,7 +57,7 @@ RSpec.describe Hako::Schedulers::EcsServiceComparator do
 
       context 'and actual deployment_configuration is default' do
         before do
-          actual_service.deployment_configuration.maximum_percent = 200
+          actual_service.deployment_configuration.maximum_percent = 150
           actual_service.deployment_configuration.minimum_healthy_percent = 100
         end
 
