@@ -34,6 +34,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'aws-sdk-sns'
   spec.add_dependency 'aws-sdk-ssm'
   spec.add_dependency 'jsonnet'
+  spec.add_dependency 'rspec_junit_formatter'
 
   spec.add_development_dependency 'bundler'
   spec.add_development_dependency 'coveralls'

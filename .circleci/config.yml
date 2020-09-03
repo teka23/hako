@@ -8,6 +8,11 @@ jobs:
       - checkout
       - run: bin/setup
       - run: rake spec
+      - run:
+          command: bundle exec rspec --format RspecJunitFormatter -o ~/rspec/rspec.xml
+          when: always
+      - store_test_results:
+          path: ~/rspec
 
 workflows:
   version: 2
